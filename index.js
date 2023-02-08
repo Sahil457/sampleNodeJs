@@ -1,6 +1,6 @@
 const http = require('http');
 const fs = require('fs');
-const PORT = 8009;
+const PORT = process.env.PORT;
 const hostname = "localhost";
 const home = fs.readFileSync('./index.html');
 const server = http.createServer((req, res) => {
@@ -16,7 +16,7 @@ const server = http.createServer((req, res) => {
     } else {
         return res.end("<h1>Unknown endpoint</h1>");
     }
-});
+});git 
 
 server.listen(PORT, hostname, () => {
     console.log(`Server is working on http://${hostname}:${PORT}`);
