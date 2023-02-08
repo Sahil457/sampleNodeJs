@@ -16,7 +16,7 @@ const server = http.createServer((req, res) => {
     } else {
         return res.end("<h1>Unknown endpoint</h1>");
     }
-});git 
+}); 
 
 server.listen(PORT, hostname, () => {
     console.log(`Server is working on http://${hostname}:${PORT}`);
